@@ -181,16 +181,6 @@
             background-color: #f1f5f9;
         }
 
-        .status-lolos {
-            color: #27ae60;
-            font-weight: 600;
-        }
-
-        .status-tidak-lolos {
-            color: #e74c3c;
-            font-weight: 600;
-        }
-
         .note {
             background-color: #fff9e6;
             padding: 15px;
@@ -316,7 +306,7 @@
                     <th>NIS</th>
                     <th>Nama</th>
                     <th>Kelas</th>
-                    <th>Status</th>
+                    <!-- Kolom Status dihilangkan -->
                 </tr>
             </thead>
             <tbody>
@@ -328,7 +318,7 @@
             <p><strong>Catatan:</strong> Data ini diambil dari file "REKAP DATA BCMPK'20 DAN NIS 2-2.xlsx".</p>
         </div>
 
-        <a href="index.html" class="back-btn">
+        <a href="Pengumuman.html" class="back-btn">
             <i class="fas fa-arrow-left"></i> Kembali ke Halaman Login
         </a>
     </div>
@@ -417,7 +407,7 @@
             { no: 79, nis: "25563", name: "Yessi Yuaniar Damarani", class: "X-11", status: "TIDAK LOLOS" }
         ];
 
-        // Fungsi untuk mengisi tabel dengan data siswa
+        // Fungsi untuk mengisi tabel dengan data siswa (tanpa status)
         function populateStudentTable() {
             const tableBody = document.querySelector('#studentsTable tbody');
             
@@ -429,7 +419,7 @@
                     <td>${student.nis || '-'}</td>
                     <td>${student.name}</td>
                     <td>${student.class}</td>
-                    <td class="${student.status === 'LOLOS' ? 'status-lolos' : 'status-tidak-lolos'}">${student.status}</td>
+                    <!-- Kolom Status dihilangkan -->
                 `;
                 
                 tableBody.appendChild(row);
